@@ -11,7 +11,7 @@ embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 CONNECTION_STRING = os.getenv(
     "DATABASE_URL_SYNC",
-    "postgresql+psycopg://x0t_user:x0t_password@postgres:5432/x0t_db"
+    "postgresql+psycopg://x0t_user:a5EWvGPdtA64QBRsOPz7x47kfgfSw2yjgJzW2LiaNzspZs732iKzx3W0N5pxO1cR@ewagb98uygnqtq5dtc8hxu8t:5432/x0t_db"
 )
 
 def get_vector_store():
