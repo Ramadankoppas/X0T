@@ -5,8 +5,8 @@ from fastapi import FastAPI, Request, UploadFile, File, HTTPException
 from fastapi.responses import StreamingResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.services.pdf_service import process_and_index_pdf
-from app.services.rag_service import generate_rag_stream
+from src.app.services.pdf_service import process_and_index_pdf
+from src.app.services.rag_service import generate_rag_stream
 
 app = FastAPI(title="X0T Operations Agent", version="1.0.0")
 
