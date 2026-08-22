@@ -1,0 +1,27 @@
+[project]
+name = "x0t-task"
+version = "0.1.0"
+description = "X0T Operations Agent - RAG & SSE FastAPI Backend"
+readme = "README.md"
+authors = [
+    { name = "RamadanKoppas", email = "ramadankoppas400@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.110.0",
+    "langchain-google-genai>=1.0.0",
+    "langchain-groq>=0.1.0",
+    "langchain-community>=0.2.0",
+    "langchain-postgres>=0.0.1",
+    "langchain-text-splitters>=0.2.0",
+    "psycopg2-binary>=2.9.9",
+    "redis>=5.0.0",
+    "uvicorn>=0.28.0",
+    "pypdf>=4.0.0",
+    "python-multipart>=0.0.9",
+    "asyncpg>=0.29.0",
+    "sentence-transformers>=6.0.0",
+]
+
+[tool.uv]
+package = false
