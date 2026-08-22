@@ -30,7 +30,7 @@ WORKDIR /app
 RUN addgroup --system --gid 1001 appgroup && \
     adduser --system --uid 1001 --ingroup appgroup --home /home/appuser appuser
 
-# نسخ التطبيق والبيئة الافتراضية .venv المجهزة بالكامل من الـ Builder
+
 COPY --from=builder /app /app
 
 # إنشاء مجلد الرفع وإعطاء الصلاحيات للمستخدم
