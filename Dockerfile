@@ -5,7 +5,7 @@ FROM python:3.12-slim AS runner
 
 WORKDIR /app
 
-#Healthcheck
+#Healthcheck settings
 RUN apt-get update && \
     apt-get install -y --no-install-recommends curl && \
     rm -rf /var/lib/apt/lists/*
