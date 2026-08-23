@@ -73,3 +73,8 @@ async def chat_stream(request: Request, prompt: str):
             "X-Accel-Buffering": "no"
         }
     )
+
+# for zero down
+@app.get("/health")
+async def health():
+    return "OK"
