@@ -14,7 +14,7 @@ ENV UV_HTTP_TIMEOUT=300
 COPY pyproject.toml uv.lock* ./
 
 # 🟢 تثبيت الحزم داخل الـ Builder فقط (سواء كانت CPU أو عادية)
-RUN uv sync --no-dev --extra cpu || uv sync --no-dev
+RUN uv sync --no-dev
 
 # نسخ كود المشروع
 COPY . .

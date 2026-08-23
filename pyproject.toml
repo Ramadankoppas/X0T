@@ -6,7 +6,8 @@ readme = "README.md"
 authors = [
     { name = "RamadanKoppas", email = "ramadankoppas400@gmail.com" }
 ]
-requires-python = ">=3.12"
+
+requires-python = ">=3.12,<3.13"
 
 dependencies = [
     "fastapi>=0.110.0",
@@ -22,10 +23,8 @@ dependencies = [
     "python-multipart>=0.0.9",
     "asyncpg>=0.29.0",
     "sentence-transformers>=6.0.0",
+    "torch>=2.13.0",
 ]
-
-[tool.uv]
-package = false
 
 [tool.uv.sources]
 torch = [
