@@ -70,6 +70,6 @@ async def chat_stream(request: Request, prompt: str):
         headers={
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
-            "X-Accel-Buffering": "no"  # منع Nginx/Coolify من عمل Buffering لـ SSE
+            "X-Accel-Buffering": "no"
         }
     )

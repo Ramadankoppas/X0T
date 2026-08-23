@@ -30,9 +30,9 @@ async function uploadPDF() {
         statusDiv.innerText = '❌ فشل الاتصال بالسيرفر';
     }
 }
+const input = document.getElementById('queryInput');
 
 function sendQuery() {
-    const input = document.getElementById('queryInput');
     const chatBox = document.getElementById('chatBox');
     const prompt = input.value.trim();
 
@@ -44,6 +44,7 @@ function sendQuery() {
     let answerContainer = null;
 
     eventSource.onmessage = (event) => {
+        input.value = ''
         const data = JSON.parse(event.data);
 
         if (data.type === 'thought') {
@@ -75,3 +76,9 @@ function sendQuery() {
         eventSource.close();
     };
 }
+
+window.addEventListener('keypress',(event)=>{
+    if(event.key == 'Enter' && input.value.trim()){
+        sendQuery()
+    }
+})
